@@ -1,0 +1,26 @@
+.addressesContainer {
+  position: absolute;
+  width: 80%;
+  left: 10%;
+}
+
+table, td, th {
+  text-align: center;
+}
+
+.buttonsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  text-align: center;
+  border: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

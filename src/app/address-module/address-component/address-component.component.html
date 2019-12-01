@@ -1,0 +1,33 @@
+<div class="addressesContainer">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th><span (click)="sort('streetNumber')">Street Number</span></th>
+        <th><span (click)="sort('street')">Street</span></th>
+        <th><span (click)="sort('city')">City</span></th>
+        <th><span (click)="sort('state')">State</span></th>
+        <th><span (click)="sort('zipCode')">Zip Code</span></th>
+      </tr>
+      <tr *ngFor="let address of addressesToShow">
+        <td><input type="number" [(ngModel)]="addresses[address.localIndex].streetNumber"></td>
+        <td><input type="text" [(ngModel)]="addresses[address.localIndex].street"></td>
+        <td><input type="text" [(ngModel)]="addresses[address.localIndex].city"></td>
+        <td><input type="text" [(ngModel)]="addresses[address.localIndex].state"></td>
+        <td><input type="number" [(ngModel)]="addresses[address.localIndex].zipCode"></td>
+      </tr>
+    </thead>
+  </table>
+  <div class="buttonsContainer" *ngIf="!!addresses">
+    <div class="row">
+      <div class="col-md">
+        <button class="btn btn-primary" (click)="previous()">Previous</button>
+      </div>
+      <div class="col-md">
+        <button class="btn btn-success" (click)="saveAddresses()">Save</button>
+      </div>
+      <div class="col-md">
+        <button class="btn btn-primary" (click)="next()">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
